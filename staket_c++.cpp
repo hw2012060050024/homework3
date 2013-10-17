@@ -11,11 +11,12 @@ int main(){
 	int n;
 staket a=staket();
 a.push(3);
-cout<<a.reade();
+cout<<a.reade()<<endl;
 
 a.push(5);
 a.push(6);
 a.pop ();
 cout<<a.reade();
 cin>>n;
+system("pause");
 return n;}

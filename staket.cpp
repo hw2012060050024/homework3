@@ -10,10 +10,10 @@ staket::~staket(void)
 {
 }
 staket ::staket( ){
-//h=(node *)malloc(sizeof(node));
-//if(!h){cout<<"ÄÚ´æ·ÖÅäÊ§°Ü"<<endl;exit(-1);};
-//h->next =NULL;
-	h=NULL;
+h=(node *)malloc(sizeof(node));
+if(!h){cout<<"ÄÚ´æ·ÖÅäÊ§°Ü"<<endl;exit(-1);};
+h->next =NULL;
+	h1=h;
 };
 
 void staket :: pop(){
@@ -24,16 +24,16 @@ free(p);
 
 void staket::push( int n){
 	node*p=(node*)malloc(sizeof(node));
-	if(!h){cout<<"ÄÚ´æ·ÖÅäÊ§°Ü"<<endl;exit(-1);};
+	if(!p){cout<<"ÄÚ´æ·ÖÅäÊ§°Ü"<<endl;exit(-1);};
 	p->next =h->next ;p->data =n;
 	h->next =p;
 };
 int staket::reade (){
 	int m;
-	return m=h->data ;
+	return m=h->next->data ;
 };
 bool staket::isempty(){
 	bool a=false;
-	if(h)return a;
+	if(h==h1)return a;
 	else return true;
 };
